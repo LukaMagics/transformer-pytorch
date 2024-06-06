@@ -1,0 +1,18 @@
+[
+    {
+        "source": "I am a student.",
+        "target": "저는 학생입니다."
+    },
+    {
+        "source": "How are you?",
+        "target": "어떻게 지내세요?"
+    },
+    {
+        "source": "The weather is nice today.",
+        "target": "오늘 날씨가 좋네요."
+    },
+    {
+        "source": "She loves to read books.",
+        "target": "그녀는 책 읽는 것을 좋아해요."
+    }
+]

@@ -30,6 +30,6 @@ for batch in data_loader:
     src = batch["src"]
     tgt = batch["tgt"]
 
-    out = transformer(src, tgt)
+    encoder_output = transformer(src, tgt)
 
     break

@@ -1,5 +1,9 @@
 [
     {
+        "source": "I am",
+        "target": "저는"
+    },
+    {
         "source": "I am a student.",
         "target": "저는 학생입니다."
     },

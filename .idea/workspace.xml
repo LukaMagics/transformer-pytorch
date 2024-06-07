@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad6d456-d7d9-44d4-a8fd-fc715692d29a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model/multi_head_attention.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/position_wise_feed_forward.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/scale_doc_product_attention.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eng2kor.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/eng2kor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/encoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/multi_head_attention.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/multi_head_attention.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/transformer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +42,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.encoder.executor": "Run",
     "Python.positional_encoding.executor": "Run",
     "Python.positional_encoding_sample.executor": "Run",
     "Python.positional_encoding_sample2.executor": "Run",
+    "Python.test.executor": "Run",
     "Python.train.executor": "Run",
     "Python.transformer.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -52,7 +56,7 @@
   }
 }]]></component>
   <component name="RunManager" selected="Python.train">
-    <configuration name="positional_encoding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="encoder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="transformer-pytorch" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -65,7 +69,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/positional_encoding.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/encoder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="positional_encoding_sample2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="transformer-pytorch" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,11 +109,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/positional_encoding_sample2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,10 +169,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.train" />
-        <item itemvalue="Python.positional_encoding_sample" />
-        <item itemvalue="Python.positional_encoding_sample2" />
-        <item itemvalue="Python.positional_encoding" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.transformer" />
+        <item itemvalue="Python.encoder" />
+        <item itemvalue="Python.positional_encoding_sample" />
       </list>
     </recent_temporary>
   </component>

@@ -62,5 +62,6 @@ class Transformer(nn.Module):
         encoder_output = encoder_input
         for encoder in self.encoder_layers:
             encoder_output = encoder(encoder_output, src_mask)
+            break
 
         return encoder_output

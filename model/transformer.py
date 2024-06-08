@@ -37,7 +37,7 @@ class Transformer(nn.Module):
         self.decoder_embedding = nn.Embedding(tgt_vocab_size, d_model)  # [36440, 512]
         self.positional_encoding = PositionalEncoding(d_model, max_seq_length)
         self.encoder_layers = nn.ModuleList([Encoder(num_heads, d_model, d_ff, drop_prob) for _ in range(num_layers)])
-        # self.decoder_layers = nn.ModuleList([Decoder(num_heads, d_model, d_ff, dropout) for _ in range(num_layers)])
+        self.decoder_layers = nn.ModuleList([Decoder(num_heads, d_model, d_ff, drop_prob) for _ in range(num_layers)])
         # self.linear = nn.Linear(d_model, tgt_vocab_size)
         # self.softmax = nn.Softmax(tgt_vocab_size)
         self.dropout = nn.Dropout(drop_prob)
@@ -58,11 +58,16 @@ class Transformer(nn.Module):
         src_mask = self.generate_src_mask(src)
         tgt_mask = self.generate_tgt_mask(tgt)
         src_embedding = self.encoder_embedding(src)
+        tgt_embedding = self.decoder_embedding(src)
         encoder_input = self.positional_encoding(src_embedding)
 
         encoder_output = encoder_input
         for encoder in self.encoder_layers:
             encoder_output = encoder(encoder_output, src_mask)
+
+        decoder_output = tgt_embedding
+        for decoder in self.decoder_layers:
+            decoder_output = decoder(decoder_output, encoder_output, src_mask, tgt_mask)
             break
 
-        return encoder_output
+        return decoder_output

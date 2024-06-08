@@ -4,7 +4,7 @@ from torch import nn
 
 
 class MultiHeadAttention(nn.Module):
-    def __init__(self, num_heads, d_model, drop_prob):
+    def __init__(self, num_heads, d_model):
         super().__init__()
         self.num_heads = num_heads # 8
         self.d_model = d_model # 512
@@ -19,7 +19,7 @@ class MultiHeadAttention(nn.Module):
     def scale_dot_product_attention(self, Q, K, V, mask):
         K_T = K.transpose(2, 3) # [2, 8, 64, 15]
         attention_weights = torch.matmul(Q, K_T) / math.sqrt(self.d_k) # [2, 8, 15, 64] @ [2, 8, 64, 15] = [2, 8, 15, 15]
-        if mask is not None: # [2,1,1,15] -> broadcasted as [2, 8, 15, 15]
+        if mask is not None: # src_mask: [2,1,1,15]-> broadcasted as [2, 8, 15, 15]
             attention_weights = attention_weights.masked_fill(mask == 0, -10000) # [2, 8, 15, 15]
         attention_prob = torch.softmax(attention_weights, dim=-1) # [2, 8, 15, 15]
         attention_scores = torch.matmul(attention_prob, V) # [2, 8, 15, 15] @ [2, 8, 15, 64] = [2, 8, 15, 64]

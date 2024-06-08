@@ -29,7 +29,8 @@ transformer = Transformer(src_vocab_size,
 for batch in data_loader:
     src = batch["src"]
     tgt = batch["tgt"]
-
-    encoder_output = transformer(src, tgt)
+    print(src)
+    print(tgt)
+    decoder_output = transformer(src, tgt)
 
     break

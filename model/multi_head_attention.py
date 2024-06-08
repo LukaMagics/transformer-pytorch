@@ -41,6 +41,5 @@ class MultiHeadAttention(nn.Module):
         attention_output = self.scale_dot_product_attention(Q, K, V, mask) # [2, 8, 15, 64]
         attention_output_concatenated = self.concat_heads(attention_output) # [2, 15, 512]
         output = self.W_o(attention_output_concatenated) # [2, 15, 512]
-        # nn.MultiHeadAttention과 output 비교해보기
 
         return output

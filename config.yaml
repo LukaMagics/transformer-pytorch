@@ -3,7 +3,7 @@ data:
   val_data_path: "./data/eng2kor.json"
 
 model:
-  max_seq_length: 5
+  max_seq_length: 15
   num_layers: 6
   num_heads: 8
   d_ff: 2048
@@ -11,7 +11,7 @@ model:
   drop_prob: 0.1
 
 train:
-  batch_size: 1
+  batch_size: 2
 
 optimizer:
   init_lr: 1e-5

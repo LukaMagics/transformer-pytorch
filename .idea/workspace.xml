@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad6d456-d7d9-44d4-a8fd-fc715692d29a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model/scale_doc_product_attention.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/eng2kor.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/eng2kor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/encoder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/multi_head_attention.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/multi_head_attention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/position_wise_feed_forward.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/position_wise_feed_forward.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/transformer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,9 +167,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.train" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.transformer" />
         <item itemvalue="Python.encoder" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.positional_encoding_sample" />
       </list>
     </recent_temporary>

@@ -41,6 +41,7 @@ class Transformer(nn.Module):
         # self.linear = nn.Linear(d_model, tgt_vocab_size)
         # self.softmax = nn.Softmax(tgt_vocab_size)
         self.dropout = nn.Dropout(drop_prob)
+        self.num_heads = num_heads
 
     def generate_src_mask(self, src):
         src_mask = (src != 0).unsqueeze(1).unsqueeze(2)  # [2,1,1,15]
